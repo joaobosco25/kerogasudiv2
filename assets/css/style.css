@@ -1066,6 +1066,10 @@ img {
     text-align: center;
   }
 
+  .steps-inner-lula h2 {
+    text-align: center;
+  }
+
   .footer {
     text-align: center;
   }
@@ -1245,6 +1249,7 @@ img {
     .step-card h3 {
       font-size: 20px;
     }
+    
 
 }
 
@@ -3566,5 +3571,216 @@ img {
   .inner-page .inner-order-arrow,
   .inner-page .inner-order-dots {
     z-index: 4;
+  }
+}
+
+.gas-program-steps {
+  width: 100%;
+  padding: 72px 20px;
+  background: linear-gradient(80deg, #4bef2a81 0%, #dbfc1f8f 100%);
+}
+
+.gas-program-wrap {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.gas-program-heading {
+  max-width: 720px;
+  margin-bottom: 38px;
+}
+
+.gas-program-heading span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #01790f;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.gas-program-heading h2 {
+  margin: 0;
+  color: #172331;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 0.98;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+}
+
+.gas-program-heading p {
+  max-width: 560px;
+  margin: 18px 0 0;
+  color: #52606d;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  font-weight: 600;
+}
+
+.gas-program-flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.gas-program-card {
+  position: relative;
+  min-height: 190px;
+  padding: 28px 26px 26px;
+  border: 1px solid rgba(255, 90, 0, 0.16);
+  border-radius: 28px;
+  background: #eaff006b;
+  box-shadow: 0 18px 42px rgba(38, 31, 25, 0.08);
+  overflow: hidden;
+}
+
+.gas-program-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(180deg, #03c50d, #fff200);
+}
+
+.gas-program-number {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  background: #0062ff;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 950;
+  box-shadow: 0 12px 24px rgba(255, 90, 0, 0.24);
+}
+
+.gas-program-icon {
+  position: absolute;
+  top: 28px;
+  right: 26px;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.gas-program-text h3 {
+  margin: 0;
+  color: #172331;
+  font-size: 1.22rem;
+  line-height: 1.16;
+  font-weight: 950;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.gas-program-text p {
+  margin: 12px 0 0;
+  color: #5d6873;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+.gas-program-arrow {
+  align-self: center;
+  color: #ff5a00;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0.72;
+}
+
+@media (min-width: 1000px) {
+  .gas-program-steps {
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+  }
+
+
+  .gas-program-heading {
+    margin-left: 200px;
+    text-align: center;
+    margin-top: 45px;
+  }
+  .gas-program-heading p {
+    text-align: center;
+    margin-left: 80px;
+  }
+
+  .gas-program-card {
+    display: flexbox;
+    margin-bottom: 45px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .gas-program-steps {
+    padding: 54px 16px;
+  }
+
+  .gas-program-heading {
+    margin-bottom: 28px;
+    text-align: left;
+  }
+
+  .gas-program-heading h2 {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  .gas-program-heading p {
+    font-size: 1rem;
+  }
+
+  .gas-program-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .gas-program-arrow {
+    align-self: flex-start;
+    margin-left: 24px;
+    font-size: 2.4rem;
+    transform: rotate(90deg);
+  }
+
+  .gas-program-card {
+    min-height: auto;
+    padding: 24px 22px 22px;
+    border-radius: 24px;
+  }
+
+  .gas-program-number {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+  }
+
+  .gas-program-icon {
+    top: 24px;
+    right: 22px;
+    font-size: 1.75rem;
+  }
+
+  .gas-program-text h3 {
+    max-width: 78%;
+    font-size: 1.08rem;
+  }
+
+  .gas-program-text p {
+    font-size: 0.95rem;
   }
 }
