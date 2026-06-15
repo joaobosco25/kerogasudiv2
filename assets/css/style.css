@@ -3784,3 +3784,171 @@ img {
     font-size: 0.95rem;
   }
 }
+
+.meusocial-download {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(58px, 7vw, 92px) 20px;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(255, 255, 255, .92), transparent 28%),
+    linear-gradient(135deg, #fff8ef 0%, #ffffff 48%, #f0fff1 100%);
+  border-top: 1px solid rgba(244, 91, 9, .12);
+  border-bottom: 1px solid rgba(19, 155, 56, .12);
+}
+
+.meusocial-download::before {
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: -140px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(244, 91, 9, .10);
+}
+
+.meusocial-download::after {
+  content: "";
+  position: absolute;
+  left: -90px;
+  bottom: -120px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(21, 166, 83, .10);
+}
+
+.meusocial-download-wrap {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .78fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+}
+
+.meusocial-download-copy {
+  max-width: 720px;
+}
+
+.meusocial-download-copy h2 {
+  margin: 0;
+  color: #172331;
+  font-size: clamp(2.15rem, 4.2vw, 4rem);
+  line-height: .98;
+  font-weight: 1000;
+  letter-spacing: -.06em;
+}
+
+.meusocial-download-copy p {
+  max-width: 620px;
+  margin: 20px 0 0;
+  color: #52606d;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  font-weight: 650;
+}
+
+.meusocial-download-actions {
+  display: grid;
+  gap: 16px;
+}
+
+.meusocial-store-card {
+  min-height: 104px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-radius: 26px;
+  color: #172331;
+  background: rgba(255, 255, 255, .94);
+  border: 1px solid rgba(23, 35, 49, .10);
+  box-shadow: 0 18px 42px rgba(38, 31, 25, .10);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.meusocial-store-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(244, 91, 9, .28);
+  box-shadow: 0 22px 48px rgba(38, 31, 25, .14);
+}
+
+.meusocial-store-icon {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #ff8c33, #ff6b0d);
+  box-shadow: 0 14px 24px rgba(244, 91, 9, .22);
+  font-size: 2rem;
+}
+
+.meusocial-store-text {
+  display: grid;
+  gap: 4px;
+}
+
+.meusocial-store-text small {
+  color: #64707b;
+  font-size: .84rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.meusocial-store-text strong {
+  color: #172331;
+  font-size: 1.45rem;
+  line-height: 1;
+  font-weight: 1000;
+  letter-spacing: -.03em;
+}
+
+@media (max-width: 900px) {
+  .meusocial-download {
+    padding: 52px 16px;
+  }
+
+  .meusocial-download-wrap {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .meusocial-download-copy h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .meusocial-download-copy p {
+    font-size: 1rem;
+  }
+
+  .meusocial-store-card {
+    min-height: 92px;
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .meusocial-store-icon {
+    width: 52px;
+    height: 52px;
+    flex-basis: 52px;
+    border-radius: 16px;
+    font-size: 1.75rem;
+  }
+
+  .meusocial-store-text strong {
+    font-size: 1.28rem;
+  }
+}
+ 
+.gas-program-text a {
+  border: 1px solid greenyellow;
+  color: #00ff66;
+  background-color: #0b6f2b;
+  padding: 5px;
+  border-radius: 10px;
+}
