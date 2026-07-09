@@ -1434,9 +1434,9 @@ img {
   height: 250px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 34% 30%, rgba(0,0,0,.05), transparent 22%),
-    repeating-conic-gradient(from 0deg, rgba(0,0,0,.12) 0 18deg, rgba(255,255,255,.06) 18deg 36deg);
-  opacity: .38;
+    radial-gradient(circle at 32% 28%, rgba(255,255,255,.32), transparent 0 18%, rgba(255,255,255,.08) 19% 42%, transparent 43%),
+    radial-gradient(circle at 68% 68%, rgba(255,255,255,.20), transparent 0 16%, rgba(255,255,255,.06) 17% 34%, transparent 35%);
+  opacity: .28;
   pointer-events: none;
 }
 
@@ -1487,7 +1487,7 @@ img {
 .kero-promo-image {
   position: relative;
   min-height: 620px;
-  background-image: url('../img/promocao-versao-responsiva.png');
+  background-image: url('../img/promocao-kerogas10-mobile.png');
   background-size: cover;
   background-position: center bottom;
 }
@@ -3951,4 +3951,538 @@ img {
   background-color: #0b6f2b;
   padding: 5px;
   border-radius: 10px;
+}
+
+/* Depoimentos Google - inserido antes do footer na home */
+.kero-google-reviews {
+  position: relative;
+  overflow: hidden;
+  background: #c03d04;
+  color: #ffffff;
+  padding: 62px 0 58px;
+  border-top: 5px solid #c03d04;
+}
+
+.kero-google-reviews::before,
+.kero-google-reviews::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .06);
+  pointer-events: none;
+}
+
+.kero-google-reviews::before {
+  top: -220px;
+  left: -90px;
+}
+
+.kero-google-reviews::after {
+  right: -160px;
+  bottom: -240px;
+}
+
+.kero-google-reviews-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.kero-google-reviews h2 {
+  margin: 0 0 44px;
+  text-align: center;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  line-height: 1.05;
+  font-weight: 950;
+  letter-spacing: -.04em;
+}
+
+.kero-google-carousel {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.kero-google-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 44px) / 3);
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 2px 0 12px;
+  scrollbar-width: none;
+}
+
+.kero-google-track::-webkit-scrollbar {
+  display: none;
+}
+
+.kero-google-card {
+  min-height: 255px;
+  scroll-snap-align: start;
+  border-radius: 16px;
+  background: #f7f7f7;
+  color: #0b1018;
+  padding: 24px 24px 22px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .16);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.kero-google-card-head {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) 28px;
+  gap: 14px;
+  align-items: start;
+}
+
+.kero-google-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0d5eb4, #f7b500);
+  font-size: 1.42rem;
+  font-weight: 950;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, .76);
+  object-fit: cover;
+  overflow: hidden;
+}
+
+img.kero-google-avatar {
+  display: block;
+  background: #ffffff;
+  object-fit: cover;
+}
+
+.kero-google-author {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.kero-google-author strong {
+  color: #05070a;
+  font-size: 1.03rem;
+  line-height: 1.1;
+  font-weight: 950;
+}
+
+.kero-google-author small,
+.kero-google-author em {
+  color: #5b616b;
+  font-size: .84rem;
+  line-height: 1.18;
+  font-style: normal;
+}
+
+.kero-google-icon svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.kero-google-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f6b400;
+  font-size: 1.42rem;
+  line-height: 1;
+  letter-spacing: .02em;
+}
+
+.kero-google-stars ion-icon {
+  color: #4285f4;
+  font-size: 1.08rem;
+}
+
+.kero-google-card p {
+  margin: 0;
+  color: #05070a;
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.kero-google-no-comment {
+  color: #5b616b !important;
+  font-style: italic;
+  font-weight: 600 !important;
+}
+
+.kero-google-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(8, 18, 32, .12);
+  background: rgba(255, 255, 255, .94);
+  color: #4d5662;
+  display: grid;
+  place-items: center;
+  font-size: 2.7rem;
+  line-height: .8;
+  cursor: pointer;
+  transform: translateY(-50%);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .18);
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+
+.kero-google-arrow:hover {
+  background: #ffffff;
+  color: #c03d04;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.kero-google-arrow-prev {
+  left: -21px;
+}
+
+.kero-google-arrow-next {
+  right: -21px;
+}
+
+.kero-google-rate {
+  max-width: 1180px;
+  margin: 66px auto 0;
+  display: grid;
+  gap: 28px;
+  text-align: center;
+}
+
+.kero-google-rate h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 3.6vw, 2.8rem);
+  font-weight: 950;
+  letter-spacing: -.04em;
+}
+
+.kero-google-rate h3 span {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, .2);
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+
+.kero-google-rate-btn {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #ffffff;
+  background: #ffcc24;
+  font-weight: 950;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .02em;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .14);
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.kero-google-rate-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+@media (max-width: 980px) {
+  .kero-google-reviews {
+    padding: 48px 0 44px;
+  }
+
+  .kero-google-reviews h2 {
+    margin-bottom: 28px;
+    padding: 0 12px;
+  }
+
+  .kero-google-carousel {
+    margin: 0 -16px;
+  }
+
+  .kero-google-track {
+    grid-auto-columns: minmax(286px, 82vw);
+    gap: 16px;
+    padding: 2px 16px 14px;
+    scroll-padding-left: 16px;
+  }
+
+  .kero-google-card {
+    min-height: 276px;
+    padding: 20px 18px;
+    border-radius: 18px;
+  }
+
+  .kero-google-card-head {
+    grid-template-columns: 48px minmax(0, 1fr) 26px;
+    gap: 12px;
+  }
+
+  .kero-google-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+  }
+
+  .kero-google-author strong {
+    font-size: .98rem;
+  }
+
+  .kero-google-author small,
+  .kero-google-author em {
+    font-size: .78rem;
+  }
+
+  .kero-google-stars {
+    font-size: 1.25rem;
+  }
+
+  .kero-google-card p {
+    font-size: .96rem;
+  }
+
+  .kero-google-arrow {
+    top: 47%;
+    width: 38px;
+    height: 38px;
+    font-size: 2.35rem;
+  }
+
+  .kero-google-arrow-prev {
+    left: 8px;
+  }
+
+  .kero-google-arrow-next {
+    right: 8px;
+  }
+
+  .kero-google-rate {
+    margin-top: 42px;
+    gap: 20px;
+  }
+
+  .kero-google-rate h3 {
+    font-size: clamp(1.8rem, 9vw, 2.45rem);
+  }
+
+  .kero-google-rate-btn {
+    min-height: 46px;
+  }
+}
+
+
+
+/* Ajuste da promoção ativa: cupom KeroGas10. */
+.kero-promo-image {
+  background-image: url('../img/promocao-kerogas10-mobile.png');
+}
+
+.promo-section-picture img {
+  content: url('../img/promocao-kerogas10-desktop.png');
+}
+
+@media (max-width: 720px) {
+  .promo-section-picture img {
+    content: url('../img/promocao-kerogas10-mobile.png');
+  }
+}
+
+/* =========================================================
+   AJUSTE FINAL - PROMO KEROGAS10 COM IMAGENS REAIS DO ASSETS
+   Mantém o index.html intacto. Troca as formas por composições
+   usando os vasilhames reais disponíveis em assets/img.
+   ========================================================= */
+.kero-promo-box::before,
+.kero-promo-box::after {
+  display: none;
+}
+
+.kero-promo-image {
+  background-image:
+    linear-gradient(180deg, rgba(255, 103, 0, .16), rgba(255, 103, 0, .28)),
+    url('../img/promo-produtos-modal-mobile.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.promo-section-picture img {
+  content: url('../img/promocao-kerogas10-desktop.png');
+}
+
+@media (min-width: 1021px) {
+  .kero-promo-image {
+    min-height: min(560px, calc(100dvh - 36px));
+    background-image:
+      linear-gradient(90deg, rgba(255, 103, 0, .08), rgba(255, 103, 0, .22)),
+      url('../img/promo-produtos-modal-desktop.png');
+    background-position: center bottom;
+  }
+}
+
+@media (max-width: 720px) {
+  .promo-section-card {
+    min-height: 0;
+    border-radius: 22px;
+  }
+
+  .promo-section-picture {
+    position: relative;
+    inset: auto;
+  }
+
+  .promo-section-picture img {
+    content: url('../img/promocao-kerogas10-mobile.png');
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+    transform: none;
+  }
+
+  .promo-section-card::before,
+  .promo-section-copy {
+    display: none;
+  }
+
+  .kero-promo-modal {
+    align-items: flex-start;
+    justify-content: center;
+    padding: max(12px, env(safe-area-inset-top)) 10px 12px;
+    overflow-y: auto;
+  }
+
+  .kero-promo-box {
+    width: min(94vw, 440px);
+    height: auto;
+    max-height: calc(100dvh - 24px);
+    border-radius: 18px;
+  }
+
+  .kero-promo-scroll {
+    height: auto;
+    max-height: calc(100dvh - 24px);
+    overflow-y: auto;
+  }
+
+  .kero-promo-image {
+    min-height: clamp(190px, 34dvh, 285px);
+    background-position: center bottom;
+  }
+
+  .kero-promo-image::after {
+    background: linear-gradient(180deg, rgba(255, 114, 0, 0) 55%, rgba(255, 114, 0, .96) 100%);
+  }
+
+  .kero-promo-copy {
+    padding: 16px 16px 18px;
+  }
+
+  .kero-promo-label {
+    margin-bottom: 10px;
+    padding: 7px 12px;
+    font-size: .66rem;
+  }
+
+  .kero-promo-copy h2 {
+    margin-bottom: 10px;
+    font-size: clamp(1.72rem, 8.2vw, 2.45rem);
+    line-height: .98;
+    letter-spacing: -.045em;
+  }
+
+  .kero-promo-lead {
+    margin-bottom: 12px;
+    font-size: .92rem;
+    line-height: 1.28;
+  }
+
+  .kero-promo-coupon {
+    margin-bottom: 12px;
+    padding: 11px 13px;
+    border-radius: 14px;
+  }
+
+  .kero-promo-coupon span {
+    margin-bottom: 4px;
+    font-size: .64rem;
+  }
+
+  .kero-promo-coupon strong {
+    font-size: clamp(1.45rem, 8vw, 2rem);
+  }
+
+  .kero-promo-benefits {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+    margin-bottom: 13px;
+  }
+
+  .kero-promo-benefits article {
+    padding: 8px 6px;
+    border-radius: 12px;
+  }
+
+  .kero-promo-benefits article span {
+    margin-bottom: 4px;
+    font-size: .58rem;
+  }
+
+  .kero-promo-benefits b {
+    margin-bottom: 0;
+    font-size: .68rem;
+    line-height: 1.08;
+  }
+
+  .kero-promo-benefits p {
+    display: none;
+  }
+
+  .kero-promo-button {
+    min-height: 48px;
+    padding-inline: 14px;
+    font-size: .82rem;
+  }
+
+  .kero-promo-warning {
+    margin-top: 9px;
+    font-size: .68rem;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 390px) {
+  .kero-promo-image {
+    min-height: 176px;
+  }
+
+  .kero-promo-copy {
+    padding: 14px 14px 16px;
+  }
+
+  .kero-promo-copy h2 {
+    font-size: clamp(1.55rem, 7.8vw, 2.05rem);
+  }
+
+  .kero-promo-lead {
+    font-size: .86rem;
+  }
+
+  .kero-promo-benefits {
+    gap: 5px;
+  }
 }
